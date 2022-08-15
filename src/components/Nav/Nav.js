@@ -8,7 +8,7 @@ const Nav = () => {
       <h2 className="nav_title">
         <a className="nav_title-link" href="/">
           Insure My Pev
-        </a>{" "}
+        </a>
       </h2>
     </div>
   );
