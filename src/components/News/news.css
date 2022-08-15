@@ -1,9 +1,10 @@
 .news_container {
-  width: 50%;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
+  width: 60%;
+  height: 25rem;
 }
 
 .news_signup {
@@ -13,6 +14,10 @@
   background-color: #ffc071;
   padding: 64px 24px;
   text-align: left;
+  z-index: 2;
+  position: relative;
+  top: 50px;
+  left: 100px;
 }
 
 .signup_title {
@@ -55,10 +60,6 @@
   line-height: 1.75;
   text-transform: uppercase;
   min-width: 64px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   color: #fff;
   border-radius: 0;
   font-weight: 700;
@@ -68,4 +69,18 @@
   width: 100%;
   background-color: black;
   margin-top: 1rem;
+}
+
+.signup_image_container {
+  width: 50%;
+  contain: content;
+  z-index: 1;
+  right: 30px;
+  background-image: url(../../media/productCTAImageDots.png);
+}
+
+.signup_image {
+  width: 90%;
+  transform: scaleX(-1);
+  margin-top: 30px;
 }

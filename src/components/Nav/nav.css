@@ -1,7 +1,6 @@
 .nav {
   width: 100%;
   top: 0;
-  /* position: absolute; */
   display: block;
   background: rgba(0, 0, 0, 0.87);
   text-align: center;
@@ -9,6 +8,7 @@
   min-height: 64px;
   color: white;
   position: sticky;
+  z-index: 0;
 }
 
 .nav_title {
