@@ -12,7 +12,7 @@ const Hero = () => {
         </div>
 
         <p className="hero_tagline">
-          Register now for latest updates of getting your PEV insured{" "}
+          Register now for latest updates for getting your PEV insured{" "}
         </p>
         <button className="cta_register">Register</button>
         <p className="hero_cta_tagline">Discover More</p>

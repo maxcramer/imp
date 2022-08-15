@@ -1,0 +1,26 @@
+.who_container {
+  padding: 3rem;
+}
+
+.who_items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+}
+
+.who_title {
+  margin: 0;
+}
+
+.who_underscore {
+  height: 4px;
+  width: 10%;
+  display: block;
+  margin: 8px auto 0;
+  background-color: #ff3366;
+}
+
+.who_icon {
+  height: 200px;
+}
