@@ -1,0 +1,74 @@
+.how_container {
+  width: 100%;
+  background-color: #fff5f8;
+  overflow: hidden;
+}
+
+.how_parent_items_container {
+  align-items: center;
+  width: 85%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  background-image: url(../../media//backgroundCurvey.png);
+  top: 0;
+  left: 0;
+  /* height: 20rem; */
+  padding: 4rem;
+}
+
+.how_title {
+  margin: 0;
+}
+
+.how_underscore {
+  height: 4px;
+  width: 10%;
+  display: block;
+  margin: 8px auto 0;
+  background-color: #ff3366;
+}
+
+.how_items_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 3rem 0;
+}
+
+.how_item {
+  width: 30%;
+}
+
+.how_cta_register {
+  width: 100px;
+  height: 30px;
+  background-color: #ff3366;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 16px 40px;
+  font-size: 1rem;
+  box-shadow: none;
+  min-width: 200px;
+  height: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.how_cta_register:hover {
+  text-decoration: none;
+  background-color: #e62958;
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}

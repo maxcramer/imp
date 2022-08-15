@@ -1,0 +1,71 @@
+.news_container {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.news_signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffc071;
+  padding: 64px 24px;
+  text-align: left;
+}
+
+.signup_title {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.87);
+  text-transform: uppercase;
+  margin-bottom: 0.35em;
+}
+
+.signup_tagline {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.334;
+  margin-bottom: 1rem;
+}
+
+.signup_input {
+  font-size: 16px;
+  padding: 16px;
+  width: calc(100% - 32px);
+  border: none;
+}
+
+.signup_button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+  line-height: 1.75;
+  text-transform: uppercase;
+  min-width: 64px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: #fff;
+  border-radius: 0;
+  font-weight: 700;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 0.875rem;
+  box-shadow: none;
+  width: 100%;
+  background-color: black;
+  margin-top: 1rem;
+}
