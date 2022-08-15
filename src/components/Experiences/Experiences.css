@@ -1,0 +1,29 @@
+.exp_container {
+  width: 100%;
+  background-color: #fff5f8;
+  overflow: hidden;
+}
+
+.exp_container_items_parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 65%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  background-image: url(../../media//backgroundCurvey.png);
+  top: 0;
+  left: 0;
+  height: 20rem;
+}
+
+.exp_item {
+  width: 33%;
+  padding: 0 20px;
+}
+
+.exp_icon {
+  height: 60px;
+}
