@@ -15,7 +15,9 @@ const Hero = () => {
           Register now for latest updates for getting your PEV insured{" "}
         </p>
         <button className="cta_register">Register</button>
-        <p className="hero_cta_tagline">Discover More</p>
+        <p className="hero_cta_tagline">
+          <a className="discov-more" href="#experience">Discover More</a>
+        </p>
       </div>
     </div>
   );
