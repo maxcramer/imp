@@ -2,6 +2,7 @@ import "./App.css";
 
 import Nav from "./components/Nav/Nav";
 import Home from "./Pages/Home";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Nav />
       {/* </header> */}
       <Home />
+      <Footer />
     </div>
   );
 }
