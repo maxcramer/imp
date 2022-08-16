@@ -27,3 +27,15 @@
 .exp_icon {
   height: 60px;
 }
+
+@media only screen and (max-width: 600px) {
+  .exp_container_items_parent {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .exp_item {
+    width: 100%;
+  }
+}
