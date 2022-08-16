@@ -7,7 +7,7 @@
   height: 70px;
   /* min-height: 64px; */
   color: white;
-  position: fixed;
+  position: sticky;
   z-index: 3;
   box-sizing: border-box;
   transition: 0.5s;
