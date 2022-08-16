@@ -7,6 +7,7 @@ import onewheel from "../../media/onewheel-2.png";
 
 const News = () => {
   const [input, setInput] = useState("");
+  const [message, setMessage] = useState("");
 
   const inputHandler = (e) => {
     setInput(e.target.value);
@@ -19,6 +20,11 @@ const News = () => {
         email: input,
         time: firebase.firestore.FieldValue.serverTimestamp(),
       });
+      setInput("");
+      setMessage("Thanks for Subscribing!");
+      setTimeout(() => {
+        setMessage("");
+      }, 3000);
     }
   };
 
@@ -33,10 +39,12 @@ const News = () => {
             placeholder="Email"
             type="email"
             onChange={inputHandler}
+            value={input}
           />
           <button className="signup_button">
             <h5>KEEP ME UPDATED</h5>
           </button>
+          {message && <h3>{message}</h3>}
         </form>
       </div>
       <div className="signup_image_container">
