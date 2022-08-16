@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./How.css";
 
 const How = () => {
+  let navigate = useNavigate();
   return (
     <div className="how_container">
       <div className="how_parent_items_container">
@@ -36,7 +38,14 @@ const How = () => {
             </p>
           </div>
         </div>
-        <button className="how_cta_register">Register</button>
+        <button
+          className="how_cta_register"
+          onClick={() => {
+            navigate("/register");
+          }}
+        >
+          Register
+        </button>
       </div>
     </div>
   );

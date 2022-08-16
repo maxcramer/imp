@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./hero.css";
 
 const Hero = () => {
+  let navigate = useNavigate();
   return (
     <div className="hero_container">
       <div className="hero_text_container">
@@ -14,9 +16,18 @@ const Hero = () => {
         <p className="hero_tagline">
           Register now for latest updates for getting your PEV insured{" "}
         </p>
-        <button className="cta_register">Register</button>
+        <button
+          onClick={() => {
+            navigate("/register");
+          }}
+          className="cta_register"
+        >
+          Register
+        </button>
         <p className="hero_cta_tagline">
-          <a className="discov-more" href="#experience">Discover More</a>
+          <a className="discov-more" href="#experience">
+            Discover More
+          </a>
         </p>
       </div>
     </div>
