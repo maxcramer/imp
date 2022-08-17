@@ -11,7 +11,6 @@ const Nav = () => {
         window.pageYOffset || this.document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
         navbar.style.top = "-70px";
-        console.log("scrolling");
       } else {
         navbar.style.top = "0";
       }
