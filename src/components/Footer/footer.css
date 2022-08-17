@@ -48,3 +48,11 @@
   height: 50px;
   filter: invert(1);
 }
+
+.footer_link {
+  cursor: pointer;
+}
+
+.footer_link:hover {
+  text-decoration: underline;
+}

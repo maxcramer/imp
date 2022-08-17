@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import facebook from "../../media/facebook.png";
 import ig from "../../media/instagram.png";
@@ -7,6 +8,7 @@ import youtube from "../../media/youtube.png";
 import "./footer.css";
 
 const Footer = () => {
+  let navigate = useNavigate();
   return (
     <div className="footer">
       <div className="footer_info">
@@ -24,8 +26,21 @@ const Footer = () => {
         </div> */}
         <div className="footer_links">
           <h2 className="footer_sub_title">Directory</h2>
-          <a href="">Register</a>
-          <a href="">Contact</a>
+          <a className="footer_link"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Home
+          </a>
+          <a className="footer_link"
+            onClick={() => {
+              navigate("/register");
+            }}
+          >
+            Register
+          </a>
+          {/* <a href="">Contact</a> */}
         </div>
       </div>
 
