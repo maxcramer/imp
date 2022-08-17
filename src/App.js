@@ -6,7 +6,7 @@ import Nav from "./components/Nav/Nav";
 import Home from "./Pages/Home";
 import Footer from "./components/Footer/Footer";
 import Register from "./Pages/Register";
-import Error from "./Pages/Error";
+import Error from "./Pages/404";
 
 function App() {
   return (
