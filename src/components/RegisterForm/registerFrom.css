@@ -1,0 +1,108 @@
+.register_form_parent {
+  display: flex;
+  flex-direction: column;
+  background: #fff5f8;
+  width: 30%;
+  margin: 2rem auto;
+  padding: 3rem 2rem;
+  /* margin-top: 2rem;
+  margin-bottom: 5rem; */
+  min-height: 20rem;
+}
+
+.register_form_title {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.167;
+  color: rgba(0, 0, 0, 0.87);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.35em;
+}
+
+.register_form_underscore {
+  height: 4px;
+  width: 20%;
+  display: block;
+  margin: 8px auto 0;
+  background-color: #ff3366;
+}
+
+.form_item {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 40%;
+  margin-bottom: 1rem !important;
+  margin: 0 auto;
+}
+
+label,
+.register_tagline {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.4375em;
+  padding: 0;
+  display: block;
+  text-transform: capitalize;
+}
+
+input {
+  font-size: 16px;
+  padding: 16px;
+  width: calc(100% - 22px);
+  border: 1px solid #e9ddd0;
+}
+
+select {
+  padding: 16px;
+  font-size: 16px;
+  border: 1px solid #e9ddd0;
+  width: 100%;
+}
+
+.register_form_group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.email {
+  width: 90%;
+}
+
+.submit_btn {
+  width: 100px;
+  height: 30px;
+  background-color: #ff3366;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 16px 40px;
+  font-size: 1rem;
+  box-shadow: none;
+  min-width: 200px;
+  height: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.submit_btn:hover {
+  text-decoration: none;
+  background-color: #e62958;
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
