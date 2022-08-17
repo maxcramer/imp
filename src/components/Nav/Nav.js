@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./nav.css";
 
 const Nav = () => {
+  let navigate = useNavigate();
   useEffect(() => {
     var lastScrollTop = 0;
     const navbar = document.getElementById("nav");
@@ -21,7 +23,12 @@ const Nav = () => {
   return (
     <div className="nav" id="nav">
       <h2 className="nav_title">
-        <a className="nav_title-link" href="/">
+        <a
+          className="nav_title-link"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
           Insure My Pev
         </a>
       </h2>
