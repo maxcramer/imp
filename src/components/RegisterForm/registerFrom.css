@@ -106,3 +106,24 @@ select {
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
+
+@media only screen and (max-width: 600px) {
+  .register_form_parent {
+    width: 85%;
+    padding: 3rem 0.4rem;
+  }
+
+  .form_item {
+    width: 45%;
+  }
+
+  .email {
+    width: 95%;
+  }
+
+  input,
+  select {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
