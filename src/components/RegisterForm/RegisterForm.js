@@ -2,28 +2,45 @@ import React, { useState } from "react";
 import db from "../../firebase";
 import firebase from "firebase/compat/app";
 
+import { useNavigate } from "react-router-dom";
+
 import "./registerFrom.css";
 
 const RegisterForm = () => {
-  const [firstName, setFirstName] = useState("");
+  let navigate = useNavigate();
+  const [userDetails, setUserDetails] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    firstLineAddress: "",
+    secondLineAddress: "",
+    town: "",
+    postcode: "",
+    deviceType: "",
+    make: "",
+    model: "",
+  });
   const [message, setMessage] = useState("");
 
-  const inputHandler = (e) => {
-    setFirstName(e.target.value);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUserDetails((prev) => {
+      return { ...prev, [name]: value };
+    });
   };
 
-  const submitHandler = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (firstName) {
+    if (userDetails) {
       db.collection("rider").add({
-        firstName: firstName,
+        userDetails: userDetails,
         time: firebase.firestore.FieldValue.serverTimestamp(),
       });
-      setFirstName("");
       setMessage("Thanks for Subscribing!");
       setTimeout(() => {
         setMessage("");
-      }, 3000);
+        navigate("/");
+      }, 2000);
     }
   };
 
@@ -37,51 +54,87 @@ const RegisterForm = () => {
             Sign up for the latest deals for when we launch!
           </p>
         </h2>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={handleSubmit}>
           <div className="register_form_group">
             <div className="form_item">
               <label htmlFor="">First Name</label>
               <input
                 type="text"
                 placeholder="First Name"
-                value={firstName}
-                onChange={inputHandler}
+                name="firstName"
+                onChange={handleChange}
+                required
               />
             </div>
             <div className="form_item">
               <label htmlFor="">Last Name</label>
-              <input type="text" />
+              <input
+                type="text"
+                placeholder="Last Name"
+                name="lastName"
+                onChange={handleChange}
+                required
+              />
             </div>
           </div>
 
           <div className="form_item email">
             <label htmlFor="">Email</label>
-            <input type="email" />
+            <input
+              type="email"
+              placeholder="Email"
+              name="email"
+              onChange={handleChange}
+              required
+            />
           </div>
           <div className="register_form_group">
             <div className="form_item">
               <label htmlFor="">First Line of Address</label>
-              <input type="text" />
+              <input
+                type="text"
+                placeholder="First Line of Address"
+                name="firstLineAddress"
+                onChange={handleChange}
+                required
+              />
             </div>
             <div className="form_item">
               <label htmlFor="">Second Line of Address</label>
-              <input type="text" />
+              <input
+                type="text"
+                placeholder="Second Line of Address"
+                name="secondLineAddress"
+                onChange={handleChange}
+              />
             </div>
           </div>
           <div className="register_form_group">
             <div className="form_item">
-              <label htmlFor="">Town</label>
-              <input type="text" />
+              <label htmlFor="">Town / City</label>
+              <input
+                type="text"
+                placeholder="Town / City"
+                name="town"
+                onChange={handleChange}
+                required
+              />
             </div>
             <div className="form_item">
               <label htmlFor="">Postcode</label>
-              <input type="text" />
+              <input
+                type="text"
+                placeholder="Postcode"
+                name="postcode"
+                onChange={handleChange}
+                required
+              />
             </div>
           </div>
           <div className="register_form_group">
             <div className="form_item">
               <label htmlFor="">Device Type</label>
-              <select name="vehicle" id="vehicle">
+              <select name="deviceType" id="vehicle" onChange={handleChange}>
                 <option value="">Eskate</option>
                 <option value="">Ebike</option>
                 <option value="">EUC</option>
@@ -90,13 +143,25 @@ const RegisterForm = () => {
             </div>
             <div className="form_item">
               <label htmlFor="">Make</label>
-              <input type="text" />
+              <input
+                type="text"
+                placeholder="Make"
+                name="make"
+                onChange={handleChange}
+                required
+              />
             </div>
           </div>
 
           <div className="form_item email">
             <label htmlFor="">Model</label>
-            <input type="text" />
+            <input
+              type="text"
+              placeholder="Model"
+              name="model"
+              onChange={handleChange}
+              required
+            />
           </div>
           <button className="submit_btn">Submit</button>
           {message && <h3>{message}</h3>}
