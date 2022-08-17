@@ -134,11 +134,17 @@ const RegisterForm = () => {
           <div className="register_form_group">
             <div className="form_item">
               <label htmlFor="">Device Type</label>
-              <select name="deviceType" id="vehicle" onChange={handleChange}>
-                <option value="">Eskate</option>
-                <option value="">Ebike</option>
-                <option value="">EUC</option>
-                <option value="">Escooter</option>
+              <select
+                name="deviceType"
+                id="vehicle"
+                onChange={handleChange}
+                required
+              >
+                <option value="">Please Select an Option</option>
+                <option value="eksate">Eskate</option>
+                <option value="ebike">Ebike</option>
+                <option value="euc">EUC</option>
+                <option value="escooter">Escooter</option>
               </select>
             </div>
             <div className="form_item">
